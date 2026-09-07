@@ -10,15 +10,24 @@ const router = useRouter()
   const[pass,setPass]=useState()
   const [error,setError]=useState()
       const [showPassword,setShowPassword]=useState(false)
-
-  function isValidPassword(password) {
+ function isValidPassword(password) {
   const passwordRegex =
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
 
   return passwordRegex.test(password);
 }
+  function isValidEmail(email) {
+  const emailRegex =
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
+
+  return emailRegex.test(email);
+}
   async function handlereg(){
-if (!isValidPassword){
+    if (!isValidEmail(mail)) {
+    setError("Please enter a valid email address");
+    return;
+  }
+if (!isValidPassword(pass)){
   
     setError(
       "Password must be at least 8 characters and include uppercase, lowercase, number and special character"
