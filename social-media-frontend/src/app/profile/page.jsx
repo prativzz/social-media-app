@@ -5,7 +5,7 @@ const page = () => {
     const [details,setDetails]=useState([])
 async function getdetails() {
     const token = localStorage.getItem("token");
-    const res= await fetch ("http://localhost:3000/api/users/me",{
+    const res= await fetch (`${process.env.NEXT_PUBLIC_API_URL}/api/users/me`,{
         headers: {
   Authorization: `Bearer ${token}`
 }}

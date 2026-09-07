@@ -9,7 +9,7 @@ export default function Home() {
   const router=useRouter()
   const [posts,setPosts]=useState([])
    async function getposts (){
-      const res= await fetch ("http://localhost:3000/api/posts");
+      const res= await fetch (`${process.env.NEXT_PUBLIC_API_URL}/api/posts`);
 
      const data = await res.json();
      if (res.ok)
