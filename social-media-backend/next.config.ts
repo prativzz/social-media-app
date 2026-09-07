@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: "Access-Control-Allow-Origin",
-            value: "http://localhost:3001",
+            value: "https://social-media-p4ehd9u3z-prativ-mallicks-projects.vercel.app",
           },
           {
             key: "Access-Control-Allow-Methods",
