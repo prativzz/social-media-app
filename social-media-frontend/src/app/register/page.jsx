@@ -17,8 +17,8 @@ const router = useRouter()
   return passwordRegex.test(password);
 }
   function isValidEmail(email) {
-  const emailRegex =
-    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   return emailRegex.test(email);
 }
