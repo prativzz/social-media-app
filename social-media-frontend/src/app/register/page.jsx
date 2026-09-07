@@ -23,6 +23,7 @@ const router = useRouter()
   return emailRegex.test(email);
 }
   async function handlereg(){
+    setError("");
     if (!isValidEmail(mail)) {
     setError("Please enter a valid email address");
     return;
